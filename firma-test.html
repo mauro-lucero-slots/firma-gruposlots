@@ -23,7 +23,7 @@
                         style="text-align: left; padding: 0 16px; border-width: 4px 1px 4px 4px; border-style: none solid none none; border-color: #1f497d; color:#1f497d; min-width: 240px; height: 73.5px;">
                         <div
                             style="text-align: left; margin: 0px; font-family: &quot;Segoe UI&quot;, &quot;Segoe UI Web (West European)&quot;, -apple-system, BlinkMacSystemFont, Roboto, &quot;Helvetica Neue&quot;, sans-serif; font-size: 15px;">
-                            <b><span id="nombre"></span> <span id="apellido"></span></b>
+                            <b><span id="nombre"></span></b>
                         </div>
                         <div
                             style="text-align: left; margin: 0px; font-family: &quot;Segoe UI&quot;, &quot;Segoe UI Web (West European)&quot;, -apple-system, BlinkMacSystemFont, Roboto, &quot;Helvetica Neue&quot;, sans-serif; font-size: 15px;">
@@ -92,60 +92,7 @@
         </p>
     </div>
 
-
-
-
-    <script>
-        // Obtener los parámetros de la URL
-        const params = new URLSearchParams(window.location.search);
-
-        // Capturar valores
-        const nombre = params.get("nombre");
-        const apellido = params.get("apellido");
-        const puesto = params.get("puesto");
-        const deptTrabajo = params.get("deptTrabajo");
-        const direccionDeTrabajo = params.get("direccionDeTrabajo");
-        const codigoPostal = params.get("codigoPostal");
-        const localidad = params.get("localidad");
-        const provincia = params.get("provincia");
-        const email = params.get("email");
-        const telefono = params.get("telefono");
-        const sitioWeb = params.get("sitioWeb");
-
-
-
-        // Imprimir parámetros en la página
-
-        document.getElementById("nombre").innerHTML = `${nombre}`;
-        document.getElementById("apellido").innerHTML = `${apellido}`;
-        document.getElementById("puesto").innerHTML = `${puesto}`;
-        document.getElementById("deptTrabajo").innerHTML = `${deptTrabajo}`;
-        document.getElementById("direccionDeTrabajo").innerHTML = `${direccionDeTrabajo}`;
-        document.getElementById("codigoPostal").innerHTML = `${codigoPostal}`;
-        document.getElementById("localidad").innerHTML = `${localidad}`;
-        document.getElementById("provincia").innerHTML = `${provincia}`;
-
-        document.getElementById("email").innerHTML = `
-            <a href="mailto:${email}"
-                title="${email}" target="_blank"
-                rel="noopener noreferrer">
-                ${email}
-            </a>
-        `;
-        document.getElementById("telefono").innerHTML = `
-            Tel:
-            <a href="tel:${telefono}" title="${telefono}" target="_blank"
-                rel="noopener noreferrer">
-                ${telefono}
-            </a>
-        `;
-        document.getElementById("sitioWeb").innerHTML = `
-            <a href="${sitioWeb}" title="${sitioWeb}" target="_blank"
-                rel="noopener noreferrer">
-                ${sitioWeb}
-            </a>
-        `;
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
