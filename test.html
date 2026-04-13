@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 250px;
+        }
+
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        #resultado {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Formulario</h2>
+
+    <form id="miFormulario">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellido" placeholder="Apellido" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="resultado">
+        <span id="textoResultado"></span>
+        <button onclick="copiarTexto()">📋 Copiar</button>
+    </div>
+
+    <script>
+        const formulario = document.getElementById("miFormulario");
+        const resultado = document.getElementById("resultado");
+        const textoResultado = document.getElementById("textoResultado");
+
+        formulario.addEventListener("submit", function (e) {
+            e.preventDefault(); // evita que recargue la página
+
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+
+            const textoFinal = nombre + " " + apellido;
+
+            textoResultado.textContent = textoFinal;
+            resultado.style.display = "block";
+        });
+
+        function copiarTexto() {
+            const texto = textoResultado.textContent;
+            navigator.clipboard.writeText(texto)
+                .then(() => {
+                    // alert("Copiado al portapapeles ✅");
+                });
+        }
+    </script>
+
+</body>
+
+</html>

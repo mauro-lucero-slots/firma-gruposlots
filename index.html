@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Generador de Firma - Grupo Slots</title>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white p-6 m-8 rounded-lg shadow-md space-y-4 w-full max-w-4xl">
+        <h1 class="text-2xl font-semibold text-gray-800">
+            Generador de firma - Grupo Slots
+        </h1>
+
+        <form class="space-y-4">
+
+            <!-- Nombre -->
+            <input id="nombre" type="text" placeholder="Nombre" class="w-full border rounded-md px-3 py-2" required>
+            <!-- Apellido -->
+            <input id="apellido" type="text" placeholder="Apellido" class="w-full border rounded-md px-3 py-2" required>
+            <!-- Correo electrónico -->
+            <input id="email" type="email" placeholder="Correo electrónico" class="w-full border rounded-md px-3 py-2" required>
+            <!-- Puesto de trabajo -->
+            <input id="puesto" type="text" placeholder="Puesto" class="w-full border rounded-md px-3 py-2" required>
+            <!-- Dirección de trabajo -->
+            <input id="direccion" type="text" placeholder="Dirección de trabajo" class="w-full border rounded-md px-3 py-2" required>
+            <!-- Localidad -->
+            <input id="localidad" type="text" placeholder="Localidad" class="w-full border rounded-md px-3 py-2" required>
+            <!-- Provincia -->
+            <input id="provincia" type="text" placeholder="Provincia" class="w-full border rounded-md px-3 py-2" required>
+            <!-- Código postal -->
+            <input id="cp" type="number" placeholder="Código postal" class="w-full border rounded-md px-3 py-2" required>
+            <!-- Selector de imagen -->
+            <div>
+                <p class="text-sm font-medium text-gray-700 mb-2">
+                    Elegí una imagen para la firma
+                </p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+
+                    <!-- Firma 1 -->
+                    <label class="cursor-pointer justify-center flex">
+                        <input type="radio" name="firma" value="1" class="hidden peer" checked>
+                        <img src="img/firma(1).jpg"
+                            class="w-full max-w-[150px] aspect-[150/127] object-contain border rounded-md peer-checked:ring-2 peer-checked:ring-blue-600">
+                    </label>
+
+                    <!-- Firma 2 -->
+                    <label class="cursor-pointer justify-center flex">
+                        <input type="radio" name="firma" value="2" class="hidden peer">
+                        <img src="img/firma(2).jpg"
+                            class="w-full max-w-[150px] aspect-[150/127] object-contain border rounded-md peer-checked:ring-2 peer-checked:ring-blue-600">
+                    </label>
+
+                    <!-- Firma 3 -->
+                    <label class="cursor-pointer justify-center flex">
+                        <input type="radio" name="firma" value="3" class="hidden peer">
+                        <img src="img/firma(3).jpg"
+                            class="w-full max-w-[150px] aspect-[150/127] object-contain border rounded-md peer-checked:ring-2 peer-checked:ring-blue-600">
+                    </label>
+
+                    <!-- Firma 4 -->
+                    <label class="cursor-pointer justify-center flex">
+                        <input type="radio" name="firma" value="4" class="hidden peer">
+                        <img src="img/firma(4).jpg"
+                            class="w-full max-w-[150px] aspect-[150/127] object-contain border rounded-md peer-checked:ring-2 peer-checked:ring-blue-600">
+                    </label>
+
+                    <!-- Firma 5 -->
+                    <label class="cursor-pointer justify-center flex">
+                        <input type="radio" name="firma" value="5" class="hidden peer">
+                        <img src="img/firma(5).jpg"
+                            class="w-full max-w-[150px] aspect-[150/127] object-contain border rounded-md peer-checked:ring-2 peer-checked:ring-blue-600">
+                    </label>
+
+                </div>
+            </div>
+
+            <button class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                Generar firma
+            </button>
+        </form>
+    </div>
+
+</body>
+
+</html>
