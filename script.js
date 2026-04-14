@@ -4,6 +4,7 @@ const params = new URLSearchParams(window.location.search);
 
 // Capturar valores
 
+const imagenFirma = params.get("imagenFirma");
 const nombre = params.get("nombre");
 const puesto = params.get("puesto");
 const deptTrabajo = params.get("deptTrabajo");
@@ -18,6 +19,7 @@ const sitioWeb = params.get("sitioWeb");
 
 // Imprimir parámetros en la página
 
+document.getElementById("imagenFirma").src = `img/firma(${imagenFirma}).jpg`;
 document.getElementById("nombre").innerHTML = `${nombre}`;
 document.getElementById("puesto").innerHTML = `${puesto}`;
 document.getElementById("deptTrabajo").innerHTML = `${deptTrabajo}`;
